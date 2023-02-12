@@ -20,6 +20,10 @@ sh runner_0
 
 # data pre-processing
 
+python pre_processing.py
+
+# features extraction
+
 run the following command to extract and embed graph-based representations from CPAGs.
 
 python adc_features_extracting.py
