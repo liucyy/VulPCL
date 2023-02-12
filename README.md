@@ -18,11 +18,15 @@ run the following commands to extrac single functions from colleted source code 
 
 sh runner_0
 
-# data pre-processing
+# Data pre-processing
 
-python pre_processing.py
+cd data_preprocessing
 
-# features extraction
+run the following command to preprocess the FFmpeg and QEMU datasets.
+
+python preprocessing.py
+
+# Features extraction
 
 run the following command to extract and embed graph-based representations from CPAGs.
 
@@ -32,16 +36,66 @@ run the following command to extract and embed sequence-based representations fr
 
 python cd_features_extracting.py
 
-# labeling for vulnerability categorization
+# For RQ1: vulnerability prediction
+
+cd vul_prediction
+
+run the following command to extract and embed graph-based representations from CPAGs.
+
+python adc_features_extracting.py
+
+run the following command to extract and embed sequence-based representations from FCDSs.
+
+python cd_features_extracting.py
+
+run the following command to train our VulPVL. Where "project_name" could be FFmpeg, qemu, FFmpeg_qemu, linux
+
+python codebert_blstm.py --p project_name
+
+# For RQ2: vulnerability categorization
+
+cd vul_categorization
+
+run the following command to extract and embed graph-based representations from CPAGs.
+
+python adc_features_extracting.py
+
+run the following command to extract and embed sequence-based representations from FCDSs.
+
+python cd_features_extracting.py
+
+run the following command to perform 10-vulnerabilities labeling.
 
 python vul_files_label.py
 
-# model training
+run the following command to train our VulPVL.
 
-run the following command to tokenize the extracted features.
+python codebert_blstm.py --p linux
 
-python tokenization.py
+run the following command to train CodeBERT.
 
-run the following command to train our VulPVL. Where "project_name" could be FFmpeg, qemu, FFmpeg_qemu, linux, or big_vul.
+python codebert.py --p linux
 
-python python codebert_blstm.py --p project_name
+run the following command to train CNN.
+
+python CNN.py --p linux
+
+run the following command to train GRU.
+
+python GRU.py --p linux
+
+# For RQ3: vulnerability localization
+
+cd vul_localization
+
+run the following command to extract and embed graph-based representations from CPAGs.
+
+python adc_features_extracting.py
+
+run the following command to extract and embed sequence-based representations from FCDSs.
+
+python cd_features_extracting.py
+
+run the following command to train our VulPVL.
+
+python codebert_blstm.py --p big_vul
