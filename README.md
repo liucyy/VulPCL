@@ -28,6 +28,12 @@ run the following command to extract and embed sequence-based representations fr
 
 python cd_features_extracting.py
 
+# labeling for vulnerability categorization
+
+python vul_files_label.py
+
+# model training
+
 run the following command to tokenize the extracted features.
 
 python tokenization.py
