@@ -18,6 +18,10 @@ run the following commands to extrac single functions from colleted source code 
 
 sh runner_0
 
+# Datasets Downloading
+
+the source code of: (1) FFmpeg and QEMU datasets are available at "https://sites.google.com/view/devign"; (2) our collected Linux Kernel dataset is available "https://www.mediafire.com/file/v1t5hfl5ec88gqg/linux.zip/file"; (3) Big-Vul dataset is available at "https://github.com/ZeoVan/MSR_20_Code_vulnerability_CSV_Dataset".
+
 # Data pre-processing
 
 cd data_preprocessing
@@ -26,25 +30,17 @@ run the following command to preprocess the FFmpeg and QEMU datasets.
 
 python preprocessing.py
 
-# Features extraction
-
-run the following command to extract and embed graph-based representations from CPAGs.
-
-python adc_features_extracting.py
-
-run the following command to extract and embed sequence-based representations from FCDSs.
-
-python cd_features_extracting.py
+create three directories: './vul_prediction/data/code', './categorization/data/code', and './vul_localization/data/code', then put the filtered source code of each dataset into corresponding directory according to the RQs.
 
 # For RQ1: vulnerability prediction
 
 cd vul_prediction
 
-run the following command to extract and embed graph-based representations from CPAGs.
+run the following command to extract and embed graph-based features from CPAGs.
 
 python adc_features_extracting.py
 
-run the following command to extract and embed sequence-based representations from FCDSs.
+run the following command to extract and embed sequence-based features from FCDSs.
 
 python cd_features_extracting.py
 
@@ -56,11 +52,11 @@ python codebert_blstm.py --p project_name
 
 cd vul_categorization
 
-run the following command to extract and embed graph-based representations from CPAGs.
+run the following command to extract and embed graph-based features from CPAGs.
 
 python adc_features_extracting.py
 
-run the following command to extract and embed sequence-based representations from FCDSs.
+run the following command to extract and embed sequence-based features from FCDSs.
 
 python cd_features_extracting.py
 
@@ -88,11 +84,11 @@ python GRU.py --p linux
 
 cd vul_localization
 
-run the following command to extract and embed graph-based representations from CPAGs.
+run the following command to extract and embed graph-based features from CPAGs.
 
 python adc_features_extracting.py
 
-run the following command to extract and embed sequence-based representations from FCDSs.
+run the following command to extract and embed sequence-based features from FCDSs.
 
 python cd_features_extracting.py
 
