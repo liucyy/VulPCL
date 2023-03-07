@@ -4,7 +4,7 @@
 
 cd crawler
 
-run the following commands to collect: (1) vulnerability commits of Linux Kernel from github advisory; (2) source code of functions from "https://git.kernel.org"; (3) patch files of vulnerability functions  from "https://git.kernel.org".
+run the following commands to collect: (1) vulnerability commits of Linux Kernel from github advisory; (2) source code of functions from: https://git.kernel.org; (3) patch files of vulnerability functions  from: https://git.kernel.org.
 
 python get_data_links.py
 
@@ -20,7 +20,7 @@ sh runner_0
 
 # Datasets Downloading
 
-the source code of: (1) FFmpeg and QEMU datasets are available at "https://sites.google.com/view/devign"; (2) our collected Linux Kernel dataset is available "https://www.mediafire.com/file/v1t5hfl5ec88gqg/linux.zip/file"; (3) Big-Vul dataset is available at "https://github.com/ZeoVan/MSR_20_Code_vulnerability_CSV_Dataset".
+the source code of: (1) FFmpeg and QEMU datasets are available at: https://sites.google.com/view/devign; (2) our collected Linux Kernel dataset is available: https://www.mediafire.com/file/v1t5hfl5ec88gqg/linux.zip/file; (3) Big-Vul dataset is available at: https://github.com/ZeoVan/MSR_20_Code_vulnerability_CSV_Dataset.
 
 # Data pre-processing
 
