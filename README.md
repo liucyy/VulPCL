@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/a009e182-7073-4356-bbeb-e9e544fd49a1)# Making vulnerability prediction more practical: Prediction, categorization, and localization
+# Making vulnerability prediction more practical: Prediction, categorization, and localization
 
 VulPCL is a BLSTM and CodeBERT based approach to perform vulnerability prediction, categorization, and localization automatically within a framework. This repo is the artifact for paper [Making vulnerability prediction more practical: Prediction, categorization, and localization](https://www.sciencedirect.com/science/article/abs/pii/S0950584924000636), which has been accepted by IST'24.
 
